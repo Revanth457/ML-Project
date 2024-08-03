@@ -23,7 +23,7 @@ df = pd.read_csv("train.csv")
 
 #defining Features and Target variables
 X = df.drop(columns=['price_range']) #Features
-y = df[price_range'] #Target variable
+y = df['price_range'] #Target variable
 
 #Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=1400, test_size=600, random_state=42)
@@ -49,7 +49,7 @@ print("Precision of the SVM classifier:", precision_svm)
 f1score_svm = f1_score(y_test, predictions_svm, average='weighted')
 print("F1 Score of the SVM classifier:", f1score_svm)
 #Calculate recall
-recall_svm = recall_score(y_test, predictions_svm, average 'weighted')
+recall_svm = recall_score(y_test, predictions_svm, average = 'weighted')
 print("Recall of the SVM classifier:", recall_svm)
 
 
@@ -61,16 +61,16 @@ clf.fit(X_train, y_train)
 #Make predictions on the test data
 predictions_dt = clf.predict(X_test)
 #Calculate accuracy
-accuracy_dt accuracy_score(y_test, predictions_dt)
+accuracy_dt = accuracy_score(y_test, predictions_dt)
 print("Accuracy of the DecisionTree classifier:", accuracy_dt)
 #Calculate precision
-precision_dt precision_score(y_test, predictions_dt, average weighted')
+precision_dt = precision_score(y_test, predictions_dt, average = 'weighted')
 print("Precision of the DecisionTree classifier:", precision_dt)
 #Calculate F1 score
-f1score_dt f1_score(y_test, predictions_dt, average='weighted")
+f1score_dt = f1_score(y_test, predictions_dt, average='weighted')
 print("F1 Score of the DecisionTree classifier:", f1score_dt)
 #Calculate recall
-recall_dt recall_score(y_test, predictions_dt, average='weighted')
+recall_dt = recall_score(y_test, predictions_dt, average='weighted')
 print("Recall of the DecisionTree classifier:", recall_dt)
 
 
@@ -85,13 +85,13 @@ predictions_knn = knn.predict(X_test.values)
 accuracy_knn = accuracy_score(y_test, predictions_knn)
 print("Accuracy of the KNN classifier:", accuracy_knn)
 #Calculate precision
-precision_knn = precision_score(y_test, predictions_knn, average weighted')
+precision_knn = precision_score(y_test, predictions_knn, average = 'weighted')
 print("Precision of the KNN classifier:", precision_knn)
 #Calculate F1 score
-f1score_knn f1_score(y_test, predictions_knn, average 'weighted')
-print("F1 Score of the KNN classifier:", fiscore_knn)
+f1score_knn = f1_score(y_test, predictions_knn, average = 'weighted')
+print("F1 Score of the KNN classifier:", f1score_knn)
 #Calculate recall
-recall_knn recall_score(y_test, predictions_knn, average='weighted')
+recall_knn = recall_score(y_test, predictions_knn, average='weighted')
 print("Recall of the KNN classifier:", recall_knn)
 
 
@@ -102,18 +102,18 @@ clf = GaussianNB()
 clf.fit(X_train, y_train)
 
 #Make predictions on the test data 
-predictions_NB clf.predict(X_test)
+predictions_NB  = clf.predict(X_test)
 #Calculate accuracy
 accuracy_nb = accuracy_score(y_test, predictions_NB)
 print("Accuracy of the Navie's Bayes classifier:", accuracy_nb)
 #Calculate precision
-precision_nb = precision_score(y_test, predictions_NB, average='weighted")
+precision_nb = precision_score(y_test, predictions_NB, average='weighted')
 print("Precision of the Navie's Bayes classifier:", precision_nb)
 #Calculate F1 score
-f1score_nb = f1_score(y_test, predictions_NB, average weighted")
+f1score_nb = f1_score(y_test, predictions_NB, average = 'weighted')
 print("F1 Score of the Navie's Bayes classifier:", f1score_nb)
 #Calculate recall
-recall_nb = recall_score(y_test, predictions_NB, average 'weighted')
+recall_nb = recall_score(y_test, predictions_NB, average  = 'weighted')
 print("Recall of the Navie's Bayes classifier:", recall_nb)
 
 
@@ -123,7 +123,7 @@ XGB = XGBClassifier()
 XGB.fit(X_train, y_train)
 
 # Predict the Labels of the test data
-predictions_XGB XGB.predict(X_test)
+predictions_XGB = XGB.predict(X_test)
 #Calculate accuracy
 accuracy_xgb = accuracy_score(y_test, predictions_XGB)
 print("Accuracy of the XGB classifier:", accuracy_xgb)
@@ -134,7 +134,7 @@ print("Precision of the XGB classifier:", precision_xgb)
 f1score_xgb = f1_score(y_test, predictions_XGB, average='weighted')
 print("F1 Score of the XGB classifier:", f1score_xgb)
 #Calculate recall
-recall_xgb = recall_score(y_test, predictions_XGB, average weighted')
+recall_xgb = recall_score(y_test, predictions_XGB, average = 'weighted')
 print("Recall of the XGB classifier:", recall_xgb)
 
 
